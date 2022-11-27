@@ -2,7 +2,7 @@ const pup = require('puppeteer')
 
 const url = 'https://tipmanager.net/en'
 
-async () => {
+const main = async () => {
   try {
     const browser = await pup.launch()
     const page = await browser.newPage()
@@ -28,3 +28,5 @@ async () => {
     console.error(error)
   }
 }
+
+main();

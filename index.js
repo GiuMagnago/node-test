@@ -39,6 +39,10 @@ const timeTaken = []
 
 const main = async () => {
   try {
+    
+    
+    console.log("1111");
+    /*
     console.log(`run #${results.length}:`)
 
     const then = Date.now()
@@ -76,7 +80,7 @@ const main = async () => {
     console.log(`  == took ${elapsed} ms, avg: ${avg} ms`)
     console.log(values)
 
-    await browser.close()
+    await browser.close()*/
   } catch (error) {
     console.error(error)
   }

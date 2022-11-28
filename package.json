@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/GiuMagnago/node-test/issues"
   },
+  "script": { 
+    "start": "node ."
+  },
   "homepage": "https://github.com/GiuMagnago/node-test#readme",
   "description": ""
 }

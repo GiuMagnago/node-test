@@ -16,8 +16,5 @@
     "url": "https://github.com/GiuMagnago/node-test/issues"
   },
   "homepage": "https://github.com/GiuMagnago/node-test#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "description": ""
 }

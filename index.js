@@ -5,7 +5,9 @@ const url = 'https://tipmanager.net/en'
 
 const main = async () => {
   try {
-    const browser = await pup.launch()
+    const browser = await pup.launch({
+      executablePath: "/usr/bin/chromium-browser"
+    });
     const page = await browser.newPage()
     console.log('  iniciei')
 

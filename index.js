@@ -8,7 +8,8 @@ const main = async () => {
     const browser = await pup.launch({
       executablePath: "/opt/render/.cache/puppeteer/chrome/linux-1056772/chromium-browser",
       args: ["--no-sandbox",
-		"--disable-setuid-sandbox"]
+		"--disable-setuid-sandbox",
+	    	'--disable-dev-shm-usage']
     });
     const page = await browser.newPage()
     console.log('  iniciei')

@@ -21,7 +21,7 @@ const main = async () => {
 
     await page.waitForSelector('.css-181wc2h > .css-dvxtzn > div > h6')
     
-    const values = await page.$$eval('.css-181wc2h > .css-dvxtzn > div :nth-child(-n + 2)',(el) => el.map((values) => values.innerText))
+    const values = [await page.$eval('.css-181wc2h > .css-dvxtzn > div > h6', el => el.innerText), await page.$eval('.css-181wc2h :nth-child(2) > div > h6', el => el.innerText)]
     
     console.log(values)
 

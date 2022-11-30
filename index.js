@@ -20,8 +20,11 @@ const main = async () => {
     await page.click('ul.css-r8u8y9 :nth-child(7)')
 
     await page.waitForSelector('.css-181wc2h > .css-dvxtzn > div > h6')
-
-    const values = await page.$$eval('.css-181wc2h > .css-dvxtzn > div > h6',(el) => el.map((values) => values.innerText))
+    while (true) {
+      setTimeout(async function() {
+        const values = await page.$$eval('.css-181wc2h > .css-dvxtzn > div > h6',(el) => el.map((values) => values.innerText))
+        }, 1000 * 30)
+    }
 
 
     console.log(values)
@@ -33,5 +36,3 @@ const main = async () => {
 }
 
 main()
-
-setInterval(main, 30000)

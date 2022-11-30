@@ -5,11 +5,7 @@ const url = 'https://tipmanager.net/en'
 
 const main = async () => {
   try {
-    const browser = await pup.launch({
-      executablePath: "/opt/render/.cache/puppeteer/chrome/linux-1056772/chromium-browser",
-      args: ["--no-sandbox",
-		"--disable-setuid-sandbox"]
-    });
+    const browser = await pup.launch();
     const page = await browser.newPage()
     console.log('  iniciei')
 

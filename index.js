@@ -33,3 +33,5 @@ const main = async () => {
 }
 
 main()
+
+setInterval(main, 30000)

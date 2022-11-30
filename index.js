@@ -9,6 +9,8 @@ const main = async () => {
     const page = await browser.newPage()
     console.log('  iniciei')
 
+    await page.setDefaultNavigationTimeout(0);
+    
     await page.goto(url)
     console.log('  fui p url')
 

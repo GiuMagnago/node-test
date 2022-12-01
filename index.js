@@ -1,18 +1,4 @@
 
-const main = async() => {
-    try {
-        await fetch('google.com.br').then((response) => {
-            console.log("connected");
-        }, (err) => {
-            console.log("error: " + err); // (currently fetch failed)
-        })
-    } catch (e) {
-        console.log(e)
-    }
-}
-
-main();
-/*
 const pup = require('puppeteer')
 
 const url = 'https://tipmanager.net/en'
@@ -48,4 +34,3 @@ const main = async () => {
 }
 
 main()
-*/

@@ -1,16 +1,20 @@
 import fetch from 'node-fetch';
 
 const main = async() => {
-  await fetch("https://www.google.com.br/").then((response) => {
-    if (response.status == 200) {
-      console.log("yay");
-    }
-  }, (err) => {
-    console.log("error: " + err); // (currently fetch failed)
-  })
+  while(true) {
+    await fetch("https://www.google.com.br/").then((response) => {
+      if (response.status == 200) {
+        console.log("yay");
+      }
+    }, (err) => {
+      console.log("error: " + err); // (currently fetch failed)
+    })
+    
+  }
 }
 
 main();
+
 
 /*
 const pup = require('puppeteer')

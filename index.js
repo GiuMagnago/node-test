@@ -1,6 +1,9 @@
 
-await fetch('google.com.br');
-
+await fetch('google.com.br').then((response) => {
+    console.log("connected");
+  }, (err) => {
+    console.log("error: " + err); // (currently fetch failed)
+  })
 
 /*
 const pup = require('puppeteer')

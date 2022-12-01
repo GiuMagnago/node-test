@@ -1,11 +1,8 @@
-
 const pup = require('puppeteer')
 
 const url = 'https://tipmanager.net/en'
 
 const main = async () => {
-  while (true) {
-
     try {
       
       const browser = await pup.launch();
@@ -34,7 +31,9 @@ const main = async () => {
     } catch (error) {
       console.error(error)
     }
-  }
 }
 
-main()
+
+
+setInterval(main, 30* 1000);
+

@@ -2,8 +2,6 @@ import fetch from 'node-fetch';
 
 const main = async() => {
   await fetch("https://www.google.com.br/").then((response) => {
-    console.log(response)
-
     if (response.status == 200) {
       console.log("yay");
     }

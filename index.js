@@ -22,9 +22,11 @@ const main = async () => {
       await page.waitForSelector('.css-181wc2h > .css-dvxtzn > div > h6')
       
       while (true) {
+         setInterval(async function() {
          const values = [await page.$eval('.css-181wc2h > .css-dvxtzn > div > h6', el => el.innerText), await page.$eval('.css-181wc2h :nth-child(2) > div > h6', el => el.innerText)]
   
-      console.log(values)
+         console.log(values)
+         }, 1000*30)
       }
       
       

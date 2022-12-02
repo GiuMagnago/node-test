@@ -21,15 +21,15 @@ const main = async () => {
   
       await page.waitForSelector('.css-181wc2h > .css-dvxtzn > div > h6')
       
-
-      const values = [await page.$eval('.css-181wc2h > .css-dvxtzn > div > h6', el => el.innerText), await page.$eval('.css-181wc2h :nth-child(2) > div > h6', el => el.innerText)]
+      while (true) {
+         setTimeout(async() => {
+            const values = [await page.$eval('.css-181wc2h > .css-dvxtzn > div > h6', el => el.innerText), await page.$eval('.css-181wc2h :nth-child(2) > div > h6', el => el.innerText)]
   
-      console.log(values)
-      
+            console.log(values)
+      }, 1000 * 20)
       
   
       await browser.close()
-      main();
     } catch (error) {
       console.error(error)
     }

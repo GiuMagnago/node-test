@@ -26,8 +26,8 @@ const main = async () => {
             const values = [await page.$eval('.css-181wc2h > .css-dvxtzn > div > h6', el => el.innerText), await page.$eval('.css-181wc2h :nth-child(2) > div > h6', el => el.innerText)]
   
             console.log(values)
-      }, 1000 * 20)
-      
+         }, 1000 * 20)
+      }
   
       await browser.close()
     } catch (error) {

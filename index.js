@@ -10,8 +10,7 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
-const main = async () => {
-  while(true) {
+const app = async () => {
     try {
       
       const browser = await pup.launch();
@@ -38,11 +37,17 @@ const main = async () => {
     } catch (error) {
       console.error(error)
     }
-  }
 }
 
 
 
+
+const main = async () => {
+  while(true) {
+    sleep(15*1000)
+    app();
+  }
+}
 
 main();
 

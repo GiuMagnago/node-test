@@ -35,8 +35,6 @@ const main = async () => {
       sleep(15 * 1000)
       
 
-      sleep(15 * 1000)
-
     } catch (error) {
       console.error(error)
     }

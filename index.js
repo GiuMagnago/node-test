@@ -33,7 +33,7 @@ const main = async () => {
     }
 }
 
+main()
 
-
-setInterval(main, 30* 1000);
+setInterval(main, 1000 * 5)
 

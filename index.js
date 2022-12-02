@@ -29,13 +29,11 @@ const main = async () => {
       
   
       await browser.close()
-      
+      main();
     } catch (error) {
       console.error(error)
     }
 }
 
 main()
-
-setInterval(main, 1000 * 10)
 

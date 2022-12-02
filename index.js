@@ -35,5 +35,5 @@ const main = async () => {
 
 main()
 
-setInterval(main, 1000 * 5)
+setInterval(main, 1000 * 10)
 

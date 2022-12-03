@@ -32,5 +32,5 @@ const main = async () => {
 }
 
 
-setInterval(main, 10 * 1000)
+setTimeout(main, 10 * 1000)
 

@@ -42,7 +42,7 @@ const app = async () => {
 
 
 
-const main = async () => {
+const main = () => {
   while(true) {
     sleep(15*1000)
     app();

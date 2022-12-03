@@ -2,15 +2,7 @@ const pup = require('puppeteer')
 
 const url = 'https://tipmanager.net/en'
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
-
-const app = async () => {
+const main = async () => {
     try {
       
       const browser = await pup.launch();
@@ -40,14 +32,5 @@ const app = async () => {
 }
 
 
-
-
-const main = () => {
-  while(true) {
-    sleep(15*1000)
-    app();
-  }
-}
-
-main();
+setInterval(main, 10 * 1000)
 

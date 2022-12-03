@@ -23,7 +23,6 @@ const main = async () => {
 
       const values = await page.$$eval('.css-181wc2h > .css-dvxtzn > div > h6', (el) => el.map(values => values.innerText))
       console.log(values)
-      sleep(15 * 1000)
       
 
     } catch (error) {

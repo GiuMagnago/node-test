@@ -22,7 +22,7 @@ app.listen(process.env.PORT, () => {
 
 const main = async () => {
   try {
-    const browser = await pup.launch({headless: true});
+    const browser = await pup.launch();
     const page = await browser.newPage();
     console.log("  iniciei");
 

@@ -15,7 +15,7 @@ app.get('/algo', (req, res) => {
   res.send(result)
 })
 
-app.listen(80, () => {
+app.listen(process.env.PORT, () => {
     console.log("app online")
 })
 

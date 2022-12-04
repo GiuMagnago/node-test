@@ -1,9 +1,23 @@
 const pup = require("puppeteer");
+const express = require('express')
+const app = express()
 
 const url = "https://tipmanager.net/en";
 var result = [];
 
-module.exports = {result}
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+
+  next()
+})
+
+app.get('/algo', (req, res) => {
+  res.send(result)
+})
+
+app.listen(3000, () => {
+    console.log("app online")
+})
 
 
 const main = async () => {

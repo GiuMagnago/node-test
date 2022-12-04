@@ -1,16 +1,12 @@
 const pup = require('puppeteer')
 
+
 const url = 'https://tipmanager.net/en'
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
+export var result = []
 
-const app = async () => {
+
+const main = async () => {
     try {
       
       const browser = await pup.launch();
@@ -30,24 +26,12 @@ const app = async () => {
       await page.waitForSelector('.css-181wc2h > .css-dvxtzn > div > h6')
 
       const values = await page.$$eval('.css-181wc2h > .css-dvxtzn > div > h6', (el) => el.map(values => values.innerText))
+      result = values
       console.log(values)
-      sleep(15 * 1000)
-      
-
     } catch (error) {
       console.error(error)
     }
 }
 
-
-
-
-const main = async () => {
-  while(true) {
-    sleep(15*1000)
-    app();
-  }
-}
-
-main();
+setInterval(main, 5000);
 

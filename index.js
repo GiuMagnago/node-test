@@ -21,6 +21,7 @@ app.listen(process.env.PORT, () => {
 
 
 const main = async () => {
+  while(true) {
   try {
     const browser = await pup.launch();
     const page = await browser.newPage();
@@ -47,6 +48,7 @@ const main = async () => {
   } catch (error) {
     console.error(error);
   }
+ }
 };
 
-setInterval(main, 30 * 1000);
+main()

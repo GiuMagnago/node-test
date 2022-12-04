@@ -15,7 +15,7 @@ app.get('/algo', (req, res) => {
   res.send(result)
 })
 
-app.listen(3000, () => {
+app.listen(80, () => {
     console.log("app online")
 })
 

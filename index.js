@@ -49,4 +49,4 @@ const main = async () => {
   }
 };
 
-setInterval(main, 5000);
+setInterval(main, 20 * 1000);

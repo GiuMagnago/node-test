@@ -15,7 +15,7 @@ app.get('/algo', (req, res) => {
   res.send(result)
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("app online")
 })
 
@@ -49,4 +49,4 @@ const main = async () => {
   }
 };
 
-setInterval(main, 5000);
+setInterval(main, 120 * 1000);

@@ -22,7 +22,7 @@ app.listen(3000, () => {
 
 const main = async () => {
   try {
-    const browser = await pup.launch();
+    const browser = await pup.launch({headless: true});
     const page = await browser.newPage();
     console.log("  iniciei");
 

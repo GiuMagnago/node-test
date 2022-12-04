@@ -1,8 +1,10 @@
 const pup = require("puppeteer");
 
 const url = "https://tipmanager.net/en";
+var result = [];
 
-export var result = [];
+module.exports = {result}
+
 
 const main = async () => {
   try {
